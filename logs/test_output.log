@@ -1,0 +1,288 @@
+
+============================================================
+MLWE-1 (Kyber512-like)
+  C0 结果:
+    usvp        : β= 406, log₂(rop)= 118.55
+    bdd         : β= 406, log₂(rop)= 119.41
+    bdd_hybrid  : 攻击失败
+    dual        : β= 398, log₂(rop)= 128.41
+  CN 结果:
+    usvp        : β= 406, log₂(rop)= 150.36
+    bdd         : β= 389, log₂(rop)= 146.79
+    bdd_hybrid  : 攻击失败
+    dual        : β= 396, log₂(rop)= 136.59
+  最优攻击: usvp (C0), β=406, log₂(rop)=118.55
+
+============================================================
+MLWE-2 (Kyber768-like)
+  C0 结果:
+    usvp        : β= 624, log₂(rop)= 182.21
+    bdd         : β= 624, log₂(rop)= 183.07
+    bdd_hybrid  : 攻击失败
+    dual        : β= 607, log₂(rop)= 177.27
+  CN 结果:
+    usvp        : β= 624, log₂(rop)= 212.04
+    bdd         : β= 606, log₂(rop)= 208.09
+    bdd_hybrid  : 攻击失败
+    dual        : β= 604, log₂(rop)= 194.65
+  最优攻击: dual (C0), β=607, log₂(rop)=177.27
+
+============================================================
+MLWE-3 (Kyber1024-like)
+  C0 结果:
+    usvp        : β= 874, log₂(rop)= 255.21
+    bdd         : β= 874, log₂(rop)= 256.07
+    bdd_hybrid  : 攻击失败
+    dual        : β= 837, log₂(rop)= 244.41
+  CN 结果:
+    usvp        : β= 874, log₂(rop)= 282.87
+    bdd         : β= 855, log₂(rop)= 278.48
+    bdd_hybrid  : 攻击失败
+    dual        : β= 838, log₂(rop)= 259.91
+  最优攻击: dual (C0), β=837, log₂(rop)=244.41
+
+============================================================
+MLWE-4 (异常 q='aa')
+  错误: Invalid modulus q = aa. Must be a positive integer.
+
+============================================================
+MLWE-5 (低安全实例)
+  C0 结果:
+    usvp        : β=  40, log₂(rop)=  11.68
+    bdd         : β=  40, log₂(rop)=  13.34
+    bdd_hybrid  : β=  40, log₂(rop)=  13.93
+    dual        : β= 201, log₂(rop)=  85.92
+  CN 结果:
+    usvp        : β=  40, log₂(rop)=  43.80
+    bdd         : β=  40, log₂(rop)=  44.28
+    bdd_hybrid  : β=  40, log₂(rop)=  44.79
+    dual        : β= 201, log₂(rop)=  81.16
+  最优攻击: usvp (C0), β=40, log₂(rop)=11.68
+
+============================================================
+MLWE-6 (8192维格)
+  C0 结果:
+    usvp        : β= 790, log₂(rop)= 230.68
+    bdd         : β= 790, log₂(rop)= 231.54
+    bdd_hybrid  : 攻击失败
+    dual        : β= 749, log₂(rop)= 220.28
+  CN 结果:
+    usvp        : β= 790, log₂(rop)= 259.29
+    bdd         : β= 772, log₂(rop)= 255.26
+    bdd_hybrid  : 攻击失败
+    dual        : β= 751, log₂(rop)= 236.90
+  最优攻击: dual (C0), β=749, log₂(rop)=220.28
+
+============================================================
+MLWE-7 (均匀分布 8192)
+  C0 结果:
+    usvp        : β= 813, log₂(rop)= 237.40
+    bdd         : β= 813, log₂(rop)= 238.26
+    bdd_hybrid  : 攻击失败
+    dual        : β= 642, log₂(rop)= 187.47
+  CN 结果:
+    usvp        : β= 813, log₂(rop)= 265.68
+    bdd         : β= 795, log₂(rop)= 261.55
+    bdd_hybrid  : 攻击失败
+    dual        : β= 630, log₂(rop)= 202.47
+  最优攻击: dual (C0), β=642, log₂(rop)=187.47
+
+============================================================
+MLWR-1 (LightSaber)
+  C0 结果:
+    usvp        : β= 429, log₂(rop)= 125.27
+    bdd         : β= 429, log₂(rop)= 126.13
+    bdd_hybrid  : 攻击失败
+    dual        : 攻击失败
+  CN 结果:
+    usvp        : β= 429, log₂(rop)= 156.79
+    bdd         : β= 412, log₂(rop)= 152.95
+    bdd_hybrid  : 攻击失败
+    dual        : 攻击失败
+  最优攻击: usvp (C0), β=429, log₂(rop)=125.27
+
+============================================================
+MLWR-2 (Saber)
+  C0 结果:
+    usvp        : β= 683, log₂(rop)= 199.44
+    bdd         : β= 683, log₂(rop)= 200.44
+    bdd_hybrid  : 攻击失败
+    dual        : 攻击失败
+  CN 结果:
+    usvp        : β= 683, log₂(rop)= 228.75
+    bdd         : β= 665, log₂(rop)= 224.75
+    bdd_hybrid  : 攻击失败
+    dual        : 攻击失败
+  最优攻击: usvp (C0), β=683, log₂(rop)=199.44
+
+============================================================
+MLWR-3 (FireSaber)
+  C0 结果:
+    usvp        : β= 936, log₂(rop)= 273.31
+    bdd         : β= 936, log₂(rop)= 274.31
+    bdd_hybrid  : 攻击失败
+    dual        : 攻击失败
+  CN 结果:
+    usvp        : β= 936, log₂(rop)= 300.53
+    bdd         : β= 917, log₂(rop)= 296.19
+    bdd_hybrid  : 攻击失败
+    dual        : 攻击失败
+  最优攻击: usvp (C0), β=936, log₂(rop)=273.31
+
+============================================================
+MLWR-4 (异常 p='x')
+  错误: Invalid modulus p = x. Must be a positive integer.
+
+============================================================
+MLWR-5 (低安全实例)
+  C0 结果:
+    usvp        : β= 152, log₂(rop)=  44.38
+    bdd         : β= 152, log₂(rop)=  45.25
+    bdd_hybrid  : 攻击失败
+    dual        : β= 201, log₂(rop)=  86.79
+  CN 结果:
+    usvp        : β= 152, log₂(rop)=  78.73
+    bdd         : β= 139, log₂(rop)=  76.10
+    bdd_hybrid  : 攻击失败
+    dual        : β= 201, log₂(rop)=  89.08
+  最优攻击: usvp (C0), β=152, log₂(rop)=44.38
+
+============================================================
+MLWR-6 (8192维格 p=2^11)
+  C0 结果:
+    usvp        : 攻击失败
+    bdd         : 攻击失败
+    bdd_hybrid  : 攻击失败
+    dual        : β=2200, log₂(rop)= 642.40
+  CN 结果:
+    usvp        : 攻击失败
+    bdd         : 攻击失败
+    bdd_hybrid  : 攻击失败
+    dual        : β=2200, log₂(rop)= 642.13
+  最优攻击: dual (CN), β=2200, log₂(rop)=642.13
+
+============================================================
+MLWR-7 (8192维格 p=2^10)
+  C0 结果:
+    usvp        : 攻击失败
+    bdd         : 攻击失败
+    bdd_hybrid  : 攻击失败
+    dual        : 攻击失败
+  CN 结果:
+    usvp        : 攻击失败
+    bdd         : 攻击失败
+    bdd_hybrid  : 攻击失败
+    dual        : 攻击失败
+  所有攻击均失败
+
+============================================================
+MSIS-1 (Dilithium2-like)
+  C0 结果:
+    msis_lattice: β= 417, log₂(rop)= 121.79
+  CN 结果:
+    msis_lattice: β= 417, log₂(rop)= 121.79
+  最优攻击: msis_lattice (C0), β=417, log₂(rop)=121.79
+
+============================================================
+MSIS-2 (Dilithium3-like)
+  C0 结果:
+    msis_lattice: β= 603, log₂(rop)= 176.08
+  CN 结果:
+    msis_lattice: β= 603, log₂(rop)= 176.08
+  最优攻击: msis_lattice (C0), β=603, log₂(rop)=176.08
+
+============================================================
+MSIS-3 (Dilithium5-like)
+  C0 结果:
+    msis_lattice: β= 868, log₂(rop)= 253.47
+  CN 结果:
+    msis_lattice: β= 868, log₂(rop)= 253.47
+  最优攻击: msis_lattice (C0), β=868, log₂(rop)=253.47
+
+============================================================
+MSIS-4 (异常 q='sa')
+  错误: Invalid modulus q = sa. Must be a positive integer.
+
+============================================================
+MSIS-5 (低安全实例)
+  C0 结果:
+    msis_lattice: β= 234, log₂(rop)=  68.33
+  CN 结果:
+    msis_lattice: β= 234, log₂(rop)=  68.33
+  最优攻击: msis_lattice (C0), β=234, log₂(rop)=68.33
+
+============================================================
+MSIS-6 (8192维格)
+  C0 结果:
+    msis_lattice: β=2017, log₂(rop)= 588.96
+  CN 结果:
+    msis_lattice: β=2017, log₂(rop)= 588.96
+  最优攻击: msis_lattice (C0), β=2017, log₂(rop)=588.96
+
+============================================================
+MSIS-7 (8192维格 q=3870721)
+  C0 结果:
+    msis_lattice: β=2194, log₂(rop)= 640.65
+  CN 结果:
+    msis_lattice: β=2194, log₂(rop)= 640.65
+  最优攻击: msis_lattice (C0), β=2194, log₂(rop)=640.65
+
+============================================================
+AMLWE-1 (Aigis-ee like)
+  C0 结果:
+    usvp        : β= 385, log₂(rop)= 112.42
+    bdd         : β= 385, log₂(rop)= 113.42
+    bdd_hybrid  : 攻击失败
+    dual        : β= 328, log₂(rop)= 113.04
+  CN 结果:
+    usvp        : β= 385, log₂(rop)= 144.50
+    bdd         : β= 369, log₂(rop)= 141.16
+    bdd_hybrid  : 攻击失败
+    dual        : β= 322, log₂(rop)= 116.74
+  最优攻击: usvp (C0), β=385, log₂(rop)=112.42
+
+============================================================
+AMLWE-2 (Aigis-ene like)
+  C0 结果:
+    usvp        : β= 557, log₂(rop)= 162.64
+    bdd         : β= 557, log₂(rop)= 163.51
+    bdd_hybrid  : 攻击失败
+    dual        : β= 482, log₂(rop)= 145.48
+  CN 结果:
+    usvp        : β= 557, log₂(rop)= 193.23
+    bdd         : β= 540, log₂(rop)= 189.55
+    bdd_hybrid  : 攻击失败
+    dual        : β= 477, log₂(rop)= 159.57
+  最优攻击: dual (C0), β=482, log₂(rop)=145.48
+
+============================================================
+AMLWE-3 (Aigis-ee like 2)
+  C0 结果:
+    usvp        : β= 811, log₂(rop)= 236.81
+    bdd         : β= 811, log₂(rop)= 237.67
+    bdd_hybrid  : 攻击失败
+    dual        : β= 715, log₂(rop)= 208.78
+  CN 结果:
+    usvp        : β= 811, log₂(rop)= 265.19
+    bdd         : β= 793, log₂(rop)= 261.16
+    bdd_hybrid  : 攻击失败
+    dual        : β= 711, log₂(rop)= 224.86
+  最优攻击: dual (C0), β=715, log₂(rop)=208.78
+
+============================================================
+AMLWE-4 (异常 n=-3)
+  错误: Invalid n = -3. Must be positive.
+
+============================================================
+AMLWE-5 (低安全实例)
+  C0 结果:
+    usvp        : β= 350, log₂(rop)= 102.20
+    bdd         : β= 350, log₂(rop)= 102.94
+    bdd_hybrid  : 攻击失败
+    dual        : β= 307, log₂(rop)= 109.73
+  CN 结果:
+    usvp        : β= 350, log₂(rop)= 134.74
+    bdd         : β= 336, log₂(rop)= 131.50
+    bdd_hybrid  : 攻击失败
+    dual        : β= 300, log₂(rop)= 111.81
+  最优攻击: usvp (C0), β=350, log₂(rop)=102.20
