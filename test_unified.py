@@ -3,16 +3,16 @@
 
 import json
 from pathlib import Path
-from unified_interface import evaluate_all
+from unified_interface import evaluate_single
 
 def main():
     json_path = Path(__file__).resolve().parent / "test_parameters.json"
     with open(json_path) as f:
         test_cases = json.load(f)
 
-    results = evaluate_all(test_cases)
-
-    for res in results:
+    for tcase in test_cases:
+        r = evaluate_single(tcase)
+        res = {"name": tcase.get("name", "unnamed"), **r}
         name = res["name"]
         print(f"\n{'='*60}")
         print(name)
