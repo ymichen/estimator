@@ -49,15 +49,18 @@ class PrimalUSVP:
             c = math.log(tau) + params.n * math.log(xi) - (params.n + 1) * math.log(params.q)
         b = math.log(delta) * (2 * beta - 1) + math.log(params.q) - C
         nb = max(params.n, beta)
-        if a * nb * nb + b * nb + c >= 0:
+
+        if a * nb * nb + b * nb + c >= -1e-9:
             return nb
         disc = b * b - 4 * a * c
         if disc < 0:
-            return OO
+            if disc >= -1e-9:
+                disc = 0.0
+            else:
+                return OO
         d1 = (-b + math.sqrt(disc)) / (2 * a)
-        # d2 = (-b - math.sqrt(disc)) / (2 * a)
 
-        if nb <= d1:
+        if nb <= d1 + 1e-6:
             return min(m, math.ceil(d1))
         return OO
 

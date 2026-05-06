@@ -139,7 +139,7 @@ def evaluate_mlwe_wrap(case):
 
     ring_n = case["n"]
     total_n = ring_n * k
-    m = case.get("m", ring_n * l)   # 默认每密文贡献 ring_n 个标量样本
+    m = case.get("m", 2 * ring_n * l)   # 默认每密文贡献 ring_n 个标量样本
 
     # m 若显式提供也需校验
     if not isinstance(m, int) or m <= 0:
