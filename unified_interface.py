@@ -9,6 +9,7 @@ from estimator import ND, RC
 from estimator.lwe_parameters import LWEParameters
 from estimator.lwe_primal import primal_usvp, primal_bdd, primal_hybrid
 from estimator.lwe_bkw import coded_bkw
+from estimator.gb import arora_gb
 from estimator.conf import max_beta as MAX_BETA
 
 from dual.attack import optimize_attack as dual_optimize
@@ -22,6 +23,12 @@ COST_MODELS = {
 
 MSIS_C0_CONSTANT = 0.292
 MSIS_CN_CONSTANT = 0.292
+
+def _adapt_bkw(params, red_cost_model=None):
+    return coded_bkw(params)
+
+def _adapt_arora_gb(params, red_cost_model=None):
+    return arora_gb(params)
 
 
 # ---------- 通用参数校验函数 ----------
@@ -79,7 +86,8 @@ def evaluate_mlwe(params):
         attacks = {
             "usvp": partial(primal_usvp, red_cost_model=cost_model),
             "bdd": partial(primal_bdd, red_cost_model=cost_model),
-            "bkw": partial(coded_bkw, red_cost_model=cost_model),
+            "bkw": partial(_adapt_bkw),
+            "arora_gb": partial(_adapt_arora_gb),
             "bdd_hybrid": partial(primal_hybrid, mitm=False, babai=False, red_cost_model=cost_model),
             "bdd_mitm_hybrid": partial(primal_hybrid, mitm=True, babai=True, red_cost_model=cost_model),
         }
