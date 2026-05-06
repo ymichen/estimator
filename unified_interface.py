@@ -8,6 +8,7 @@ from functools import partial
 from estimator import ND, RC
 from estimator.lwe_parameters import LWEParameters
 from estimator.lwe_primal import primal_usvp, primal_bdd, primal_hybrid
+from estimator.lwe_bkw import coded_bkw
 from estimator.conf import max_beta as MAX_BETA
 
 from dual.attack import optimize_attack as dual_optimize
@@ -50,7 +51,7 @@ def _make_dist(chi, dist_type, n):
     if dist_type == "centered_binomial":
         return ND.CenteredBinomial(chi, n=n)
     elif dist_type == "uniform":
-        return ND.Uniform(-chi // 2, chi // 2, n=n)
+        return ND.Uniform(-chi, chi, n=n)
     else:
         raise ValueError(f"Unknown distribution type: {dist_type}")
 
@@ -78,6 +79,7 @@ def evaluate_mlwe(params):
         attacks = {
             "usvp": partial(primal_usvp, red_cost_model=cost_model),
             "bdd": partial(primal_bdd, red_cost_model=cost_model),
+            "bkw": partial(coded_bkw, red_cost_model=cost_model),
             "bdd_hybrid": partial(primal_hybrid, mitm=False, babai=False, red_cost_model=cost_model),
             "bdd_mitm_hybrid": partial(primal_hybrid, mitm=True, babai=True, red_cost_model=cost_model),
         }

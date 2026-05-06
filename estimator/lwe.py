@@ -6,7 +6,7 @@ High-level LWE interface. Pure Python, no Sage required.
 from functools import partial
 
 from .lwe_primal import primal_usvp, primal_bdd, primal_hybrid
-# from .lwe_bkw import coded_bkw   # uncomment if you have lwe_bkw.py
+from .lwe_bkw import coded_bkw   # uncomment if you have lwe_bkw.py
 from .lwe_guess import exhaustive_search, mitm, distinguish, guess_composition
 from .lwe_dual import dual
 from .lwe_dual import matzov as dual_hybrid
@@ -52,8 +52,7 @@ class Estimate:
         algorithms = {}
 
         # algorithms["arora-gb"] = guess_composition(arora_gb)   # if available
-        # algorithms["bkw"] = coded_bkw                           # if available
-
+        algorithms["bkw"] = coded_bkw                           
         algorithms["usvp"] = partial(primal_usvp, red_cost_model=red_cost_model, red_shape_model=red_shape_model)
         algorithms["bdd"] = partial(primal_bdd, red_cost_model=red_cost_model, red_shape_model=red_shape_model)
         algorithms["bdd_hybrid"] = partial(primal_hybrid, mitm=False, babai=False,
