@@ -39,6 +39,8 @@ class PrimalUSVP:
         """Find smallest d ∈ [n,m] to satisfy uSVP condition."""
         delta = deltaf(beta)
         a = -math.log(delta)
+        assert a < 0, "Root-Hermite factor delta must be > 1, so a must be negative"
+
         if tau is None or not tau:
             C = math.log(params.Xe.stddev**2 * (beta - 1)) / 2.0
             c = params.n * math.log(xi) - (params.n + 1) * math.log(params.q)
@@ -46,17 +48,19 @@ class PrimalUSVP:
             C = math.log(params.Xe.stddev**2 * (beta - 1) + tau**2) / 2.0
             c = math.log(tau) + params.n * math.log(xi) - (params.n + 1) * math.log(params.q)
         b = math.log(delta) * (2 * beta - 1) + math.log(params.q) - C
-        n = params.n
-        if a * n * n + b * n + c >= 0:
-            return n
+        nb = max(params.n, beta)
+
+        if a * nb * nb + b * nb + c >= -1e-9:
+            return nb
         disc = b * b - 4 * a * c
         if disc < 0:
-            return OO
+            if disc >= -1e-9:
+                disc = 0.0
+            else:
+                return OO
         d1 = (-b + math.sqrt(disc)) / (2 * a)
-        d2 = (-b - math.sqrt(disc)) / (2 * a)
-        if a > 0:
-            return min(m, math.ceil(d2))
-        if n <= d1:
+
+        if nb <= d1 + 1e-6:
             return min(m, math.ceil(d1))
         return OO
 
